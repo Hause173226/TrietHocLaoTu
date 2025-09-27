@@ -34,10 +34,10 @@ const Navbar = () => {
         scrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-8xl mx-auto px-1 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-1">
           {/* Logo + Nút trò chơi nổi bật */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
             <Link to="/" className="flex items-center space-x-2">
               <div className="relative">
                 <Yin className="w-6 h-6 text-teal-600" />
@@ -49,7 +49,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/tro-choi"
-              className={`ml-4 px-4 py-2 rounded-full font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-teal-900 shadow-lg border-2 border-teal-500 hover:scale-105 hover:shadow-xl transition
+              className={`ml-4 px-4 py-2 text-center rounded-full font-bold bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 text-teal-900 shadow-lg border-2 border-teal-500 hover:scale-105 hover:shadow-xl transition
                 ${
                   location.pathname === "/tro-choi"
                     ? "ring-2 ring-teal-500"
