@@ -24,7 +24,7 @@ const crosswordData = [
   },
   {
     id: 3,
-    clue: "Tác phẩm kinh điển liên quan đến Lão Tử (viet gop: kinhdien)",
+    clue: "Tác phẩm kinh điển liên quan đến Lão Tử",
     answer: "kinhdien",
     row: 2,
     startCol: 0,
@@ -42,7 +42,7 @@ const crosswordData = [
   },
   {
     id: 5,
-    clue: "Một khía cạnh quan trọng: giá trị lịch sử (mot tu: lichsu)",
+    clue: "Một khía cạnh quan trọng: giá trị lịch sử",
     answer: "lichsu",
     row: 4,
     startCol: 4,
@@ -51,7 +51,7 @@ const crosswordData = [
   },
   {
     id: 6,
-    clue: "Thuật ngữ chung: phương thức, cách tiếp cận (phuongphap)",
+    clue: "Thuật ngữ chung: phương thức, cách tiếp cận",
     answer: "phuongphap",
     row: 5,
     startCol: 5,
