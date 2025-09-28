@@ -6,7 +6,7 @@ import { Trophy, RotateCcw } from "lucide-react";
 const crosswordData = [
   {
     id: 1,
-    clue: "Khái niệm về sự thay đổi, sự biến chuyển của vạn vật",
+    clue: "Quá trình mà mọi sự vật đều trải qua, thể hiện sự thay đổi không ngừng trong tự nhiên và xã hội",
     answer: "biendoi",
     row: 0,
     startCol: 6,
@@ -15,7 +15,7 @@ const crosswordData = [
   },
   {
     id: 2,
-    clue: "Nguyên lý: mọi sự vật luôn trong trạng thái di chuyển, thay đổi",
+    clue: "Theo phép biện chứng, sự vật không đứng yên mà luôn trong trạng thái gì?",
     answer: "dichuyen",
     row: 1,
     startCol: 5,
@@ -24,7 +24,7 @@ const crosswordData = [
   },
   {
     id: 3,
-    clue: "Tác phẩm kinh điển liên quan đến Lão Tử",
+    clue: "Những tác phẩm triết học có giá trị lâu dài, được xem là chuẩn mực trong tư duy",
     answer: "kinhdien",
     row: 2,
     startCol: 0,
@@ -33,7 +33,7 @@ const crosswordData = [
   },
   {
     id: 4,
-    clue: "Yếu tố: hòa hợp, sống hòa hợp với gì? (thuộc tinh thần Lao Tu)",
+    clue: "Theo tinh thần Lão Tử, con người nên sống hòa hợp với yếu tố nào trong vũ trụ?",
     answer: "tunhien",
     row: 3,
     startCol: 4,
@@ -42,7 +42,7 @@ const crosswordData = [
   },
   {
     id: 5,
-    clue: "Một khía cạnh quan trọng: giá trị lịch sử",
+    clue: "Một lĩnh vực phản ánh sự phát triển và biến đổi của xã hội qua thời gian",
     answer: "lichsu",
     row: 4,
     startCol: 4,
@@ -51,7 +51,7 @@ const crosswordData = [
   },
   {
     id: 6,
-    clue: "Thuật ngữ chung: phương thức, cách tiếp cận",
+    clue: "Cách tiếp cận hoặc hệ thống tư duy dùng để nhận thức và giải quyết vấn đề",
     answer: "phuongphap",
     row: 5,
     startCol: 5,
@@ -60,7 +60,7 @@ const crosswordData = [
   },
   {
     id: 7,
-    clue: "Quan niệm triết học 'duy vat' (materialism) - mot tu: duyvat",
+    clue: "Quan điểm triết học cho rằng vật chất là cơ sở của mọi tồn tại",
     answer: "duyvat",
     row: 6,
     startCol: 5,
@@ -69,8 +69,8 @@ const crosswordData = [
   },
   {
     id: 8,
-    clue: "Mọi sự vật luôn trong trạng thái nào theo phép biện chứng?",
-    answer: "vandoi",
+    clue: "Trạng thái đặc trưng của sự vật theo phép biện chứng: luôn chuyển động và biến đổi",
+    answer: "vandong",
     row: 7,
     startCol: 4,
     crossIndex: 2, // 'n' -> col 6
@@ -78,7 +78,7 @@ const crosswordData = [
   },
   {
     id: 9,
-    clue: "Quy luật: su thay doi tu luong den chat",
+    clue: "Quy luật biện chứng: sự thay đổi về lượng dẫn đến sự thay đổi về chất",
     answer: "luongchat",
     row: 8,
     startCol: 2,
@@ -393,7 +393,7 @@ const CrosswordPage: React.FC = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="inline-block p-6 bg-white rounded-2xl shadow-xl">
+          <div className="inline-block p-6 bg-purple-200 rounded-2xl shadow-xl">
             <div
               className="grid gap-1"
               style={{
@@ -404,14 +404,14 @@ const CrosswordPage: React.FC = () => {
                 row.map((cell, colIdx) => (
                   <div key={`${rowIdx}-${colIdx}`} className="relative">
                     {cell.idx === undefined ? (
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-800 rounded"></div>
+                      <div className="w-10 h-10 md:w-12 md:h-12 rounded"></div>
                     ) : (
                       <>
                         <div
                           className={`rounded border-2 flex items-center justify-center font-bold text-lg w-10 h-10 md:w-12 md:h-12 transition-all duration-200
                             ${
                               cell.cross
-                                ? "border-red-400 bg-red-50"
+                                ? "border-red-400 bg-red-200"
                                 : "border-gray-300 bg-white"
                             }
                             ${
@@ -421,7 +421,7 @@ const CrosswordPage: React.FC = () => {
                             }
                             ${
                               answered[cell.idx] && !correct[cell.idx]
-                                ? "bg-red-400 border-red-500 text-red-800"
+                                ? "bg-red-600 border-red-500 text-red-800"
                                 : ""
                             }
                             ${cell.wrong ? "animate-pulse bg-red-300" : ""}
@@ -439,7 +439,7 @@ const CrosswordPage: React.FC = () => {
                         {/* Nút số cho hàng ngang */}
                         {cell.position === 0 && !answered[cell.idx] && (
                           <button
-                            className="absolute -top-1 -left-1 w-6 h-6 bg-teal-600 text-white text-xs rounded-full flex items-center justify-center font-bold shadow hover:bg-teal-700 transition"
+                            className="absolute -top-1 -left-7 lg:-left-1 w-6 h-6 bg-teal-600 text-white text-xs rounded-full flex items-center justify-center font-bold shadow hover:bg-teal-700 transition"
                             onClick={() => handleCellNumberClick(cell.idx)}
                           >
                             {cell.idx + 1}
