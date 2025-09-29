@@ -1129,36 +1129,6 @@ const HomePage: React.FC = () => {
               </p>
             </div>
           </Card>
-
-          {/* AI Usage Section */}
-          <Card delay={0.8} className="border-2 border-blue-200 bg-blue-50">
-            <h3 className="text-xl font-serif font-bold text-blue-900 mb-4 flex items-center">
-              <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                <Lightbulb className="w-4 h-4 text-white" />
-              </div>
-              AI Usage - Cam kết minh bạch học thuật
-            </h3>
-            <div className="space-y-4 text-blue-800">
-              <div className="border-l-4 border-blue-400 pl-4">
-                <h4 className="font-semibold mb-2">Sử dụng AI trong việc:</h4>
-                <ul className="space-y-1 text-sm">
-                  <li>• Tổng hợp và cấu trúc nội dung học thuật</li>
-                  <li>• Thiết kế giao diện và trải nghiệm người dùng</li>
-                  <li>• Lập trình và phát triển tính năng tương tác</li>
-                  <li>• Tạo ví dụ minh họa và bài tập thực hành</li>
-                </ul>
-              </div>
-              <div className="border-l-4 border-blue-400 pl-4">
-                <h4 className="font-semibold mb-2">Cam kết:</h4>
-                <p className="text-sm leading-relaxed">
-                  Tất cả nội dung chuyên môn đều được kiểm chứng và có nguồn gốc
-                  từ các tài liệu học thuật uy tín. AI được sử dụng như một công
-                  cụ hỗ trợ trong việc trình bày và minh họa, không thay thế quá
-                  trình nghiên cứu và tư duy độc lập của người học.
-                </p>
-              </div>
-            </div>
-          </Card>
         </div>
       </Section>
 
