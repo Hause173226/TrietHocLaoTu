@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -22,6 +22,8 @@ import Quiz from "./components/Quiz";
 import ConceptPopup from "./components/ConceptPopup";
 import CrosswordPage from "./pages/CrosswordPage";
 import FloatingChat from "./components/FloatingChat";
+import LaoTu from "./assets/images/LaoTu.jpg";
+import DaoducKinh from "./assets/images/DaoDucKinh.jpg";
 
 function App() {
   return (
@@ -44,6 +46,16 @@ function App() {
 }
 
 const HomePage: React.FC = () => {
+  const [isBookOpen, setBookOpen] = useState(false);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setBookOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
       <Navbar />
@@ -71,8 +83,16 @@ const HomePage: React.FC = () => {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Lão Tử, triết gia vĩ đại của Trung Quốc cổ đại, người sáng lập
                 học phái Đạo gia. Ông đã để lại di sản tư tưởng phong phú qua
-                tác phẩm "Đạo Đức Kinh", một trong những kinh điển triết học
-                quan trọng nhất của nhân loại.
+                tác phẩm{" "}
+                <button
+                  onClick={() => setBookOpen(true)}
+                  className="text-teal-700 font-medium underline underline-offset-2 hover:text-teal-900 focus:outline-none"
+                  aria-haspopup="dialog"
+                >
+                  "Đạo Đức Kinh"
+                </button>
+                , một trong những kinh điển triết học quan trọng nhất của nhân
+                loại.
               </p>
               <div className="bg-teal-50 p-4 rounded-lg">
                 <p className="text-teal-800 font-medium">
@@ -129,28 +149,74 @@ const HomePage: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex justify-center"
+            className="flex justify-center items-center h-[80%]"
           >
-            <div className="relative">
-              <div className="w-64 h-64 bg-gradient-to-br from-teal-200 to-yellow-200 rounded-full flex items-center justify-center shadow-xl">
-                <div className="w-56 h-56 bg-white rounded-full flex items-center justify-center relative overflow-hidden">
-                  <div className="w-48 h-48 relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-transparent rounded-full"></div>
-                    <div className="absolute inset-0 bg-gradient-to-l from-white to-transparent rounded-full"></div>
-                    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-white rounded-full"></div>
-                    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gray-900 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, ease: "linear" }}
-                className="absolute inset-0 border-4 border-teal-300 rounded-full opacity-30"
-              />
-            </div>
+            <img src={LaoTu} className="w-[84%] h-[100%]" />
           </motion.div>
         </div>
       </Section>
+      {isBookOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Bìa sách Đạo Đức Kinh"
+        >
+          {/* Overlay */}
+          <div
+            className="absolute inset-0 bg-black/50"
+            onClick={() => setBookOpen(false)}
+          />
+
+          {/* Modal content */}
+          <div className="relative w-full max-w-5xl bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+            {/* Close button */}
+            <button
+              onClick={() => setBookOpen(false)}
+              className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-gray-800 hover:bg-white focus:outline-none"
+              aria-label="Đóng"
+            >
+              ✕
+            </button>
+
+            {/* Left: cover image */}
+            <div className="w-full md:w-1/2 p-3 sm:p-4 md:p-6 bg-gray-50 flex items-center justify-center">
+              <img
+                src={DaoducKinh}
+                alt="Bìa sách Đạo Đức Kinh"
+                loading="eager"
+                className="w-full h-auto max-h-[50vh] md:max-h-[70vh] object-contain rounded-md shadow-lg"
+              />
+            </div>
+
+            {/* Right: summary / details */}
+            <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-8 flex flex-col">
+              <h4 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
+                Đạo Đức Kinh
+              </h4>
+              <p className="text-xs sm:text-sm text-gray-500 mb-4">
+                Tác giả: Lão Tử
+              </p>
+
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+                <em>Đạo Đức Kinh</em> là tác phẩm kinh điển của Lão Tử, gồm
+                khoảng 5000 chữ ngắn gọn mà thâm sâu. Tác phẩm bàn về “Đạo” –
+                nguyên lý tuyệt đối của vũ trụ – và “Đức”, tức cách con người
+                sống thuận theo tự nhiên, khiêm nhường và giản dị. Với văn phong
+                súc tích, sách truyền tải tư tưởng sống hòa hợp, buông bỏ cưỡng
+                cầu để đạt sự an nhiên.
+              </p>
+
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                Ảnh hưởng của <em>Đạo Đức Kinh</em> lan rộng khắp phương Đông,
+                từ triết học, chính trị đến nghệ thuật và y học. Đến nay, tác
+                phẩm vẫn được coi là kim chỉ nam cho những ai tìm kiếm sự tĩnh
+                lặng và trí tuệ trong đời sống hiện đại.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Section 1 */}
       <Section
