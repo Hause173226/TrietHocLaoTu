@@ -21,6 +21,7 @@ import Card from "./components/Card";
 import Quiz from "./components/Quiz";
 import ConceptPopup from "./components/ConceptPopup";
 import CrosswordPage from "./pages/CrosswordPage";
+import FloatingChat from "./components/FloatingChat";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         />
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <FloatingChat />
     </Router>
   );
 }
@@ -1129,6 +1131,36 @@ const HomePage: React.FC = () => {
               </p>
             </div>
           </Card>
+
+          {/* AI Usage Section */}
+          <Card delay={0.8} className="border-2 border-blue-200 bg-blue-50">
+            <h3 className="text-xl font-serif font-bold text-blue-900 mb-4 flex items-center">
+              <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                <Lightbulb className="w-4 h-4 text-white" />
+              </div>
+              AI Usage - Cam kết minh bạch học thuật
+            </h3>
+            <div className="space-y-4 text-blue-800">
+              <div className="border-l-4 border-blue-400 pl-4">
+                <h4 className="font-semibold mb-2">Sử dụng AI trong việc:</h4>
+                <ul className="space-y-1 text-sm">
+                  <li>• Tổng hợp và cấu trúc nội dung học thuật</li>
+                  <li>• Thiết kế giao diện và trải nghiệm người dùng</li>
+                  <li>• Lập trình và phát triển tính năng tương tác</li>
+                  <li>• Tạo ví dụ minh họa và bài tập thực hành</li>
+                </ul>
+              </div>
+              <div className="border-l-4 border-blue-400 pl-4">
+                <h4 className="font-semibold mb-2">Cam kết:</h4>
+                <p className="text-sm leading-relaxed">
+                  Tất cả nội dung chuyên môn đều được kiểm chứng và có nguồn gốc
+                  từ các tài liệu học thuật uy tín. AI được sử dụng như một công
+                  cụ hỗ trợ trong việc trình bày và minh họa, không thay thế quá
+                  trình nghiên cứu và tư duy độc lập của người học.
+                </p>
+              </div>
+            </div>
+          </Card>
         </div>
       </Section>
 
@@ -1144,14 +1176,44 @@ const HomePage: React.FC = () => {
               <div className="w-4 h-4 bg-gray-900 rounded-full"></div>
             </div>
           </div>
+
           <p className="text-gray-300 mb-6">
             Khám phá trí tuệ cổ xưa cho thế giới hiện đại
           </p>
+
           <div className="text-sm text-gray-400">
             <p>Website học thuật • Dành cho mục đích giáo dục</p>
-            <p className="mt-2">
-              © 2024 - Được tạo với React, Tailwind CSS và Framer Motion
-            </p>
+
+            <div className="mt-4 flex flex-col gap-3 items-center sm:flex-row sm:justify-center sm:gap-6">
+              <div className="flex items-center gap-3">
+                <span className="text-gray-300">Được tạo bởi</span>
+                <span className="px-3 py-1 bg-gradient-to-r from-teal-500 to-green-400 text-white rounded-full font-semibold shadow">
+                  Đỗ Trần Phúc Hậu
+                </span>
+                <span className="px-3 py-1 bg-gradient-to-r from-teal-500 to-green-400 text-white rounded-full font-semibold shadow">
+                  Vũ Trung Tín
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="text-gray-300">Thuyết trình</span>
+                <span className="px-3 py-1 bg-yellow-300 text-gray-900 rounded-full font-medium shadow-sm">
+                  Đặng Cao Thức
+                </span>
+                <span className="px-3 py-1 bg-yellow-300 text-gray-900 rounded-full font-medium shadow-sm">
+                  Phạm Thị Thơm
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="text-gray-300">Duyệt nội dung</span>
+                <span className="px-3 py-1 bg-pink-500 text-white rounded-full font-medium shadow">
+                  Cao Thị Anh Thư
+                </span>
+              </div>
+            </div>
+
+            <p className="mt-4 text-gray-400">© 2025</p>
           </div>
         </div>
       </footer>
