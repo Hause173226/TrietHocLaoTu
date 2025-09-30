@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { DivideIcon as LucideIcon } from "lucide-react";
 
 interface SectionProps {
   id: string;
@@ -11,13 +11,13 @@ interface SectionProps {
   className?: string;
 }
 
-const Section: React.FC<SectionProps> = ({ 
-  id, 
-  title, 
-  subtitle, 
-  icon: Icon, 
-  children, 
-  className = '' 
+const Section: React.FC<SectionProps> = ({
+  id,
+  title,
+  subtitle,
+  icon: Icon,
+  children,
+  className = "",
 }) => {
   return (
     <motion.section
@@ -50,7 +50,7 @@ const Section: React.FC<SectionProps> = ({
             </p>
           )}
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
