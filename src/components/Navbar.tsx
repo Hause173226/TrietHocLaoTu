@@ -26,6 +26,7 @@ const Navbar = () => {
     { to: "section6", label: "Giá trị đạo đức" },
     { to: "section7", label: "Tư duy phản biện" },
     { to: "conclusion", label: "Kết luận" },
+    { to: "ai-exchange", label: "Trao đổi AI" },
   ];
 
   return (
