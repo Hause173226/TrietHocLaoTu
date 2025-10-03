@@ -1230,6 +1230,309 @@ const HomePage: React.FC = () => {
         </div>
       </Section>
 
+      <Section
+        id="ai-exchange"
+        title="Quá trình trao đổi với AI"
+        subtitle="Minh bạch hóa việc sử dụng AI trong nghiên cứu và phát triển nội dung học thuật"
+        icon={Brain}
+        className="bg-gradient-to-br from-purple-50 to-indigo-50"
+      >
+        <Card>
+          <h3 className="text-xl font-serif font-bold text-gray-900 mb-6">
+            Tổng hợp quá trình hỏi đáp và phát triển ý tưởng
+          </h3>
+
+          <div className="space-y-6">
+            {/* Bước 1 */}
+            <div className="bg-white p-6 rounded-xl border border-purple-200 shadow-sm">
+              <h4 className="font-bold text-purple-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-purple-700 font-bold">1</span>
+                </div>
+                Ý tưởng ban đầu: Từ hình ảnh đến website
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Câu hỏi:</strong>
+                  </p>
+                  <p className="text-gray-600 italic">
+                    "Viết prompt để làm ra 1 cái web chi tiết sáng tạo đẹp mắt
+                    dựa trên hình ảnh này"
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Hỗ trợ AI:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Phân tích nội dung từ hình ảnh về triết học Lão Tử, đề xuất
+                    cấu trúc website React + Tailwind với 7 mục chính theo mục
+                    tiêu học tập.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 2 */}
+            <div className="bg-white p-6 rounded-xl border border-blue-200 shadow-sm">
+              <h4 className="font-bold text-blue-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-blue-700 font-bold">2</span>
+                </div>
+                Tích hợp yêu cầu giảng viên
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Yêu cầu thầy:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Sản phẩm cần có chiều sâu học thuật, tính tương tác, sáng
+                    tạo, minh bạch việc sử dụng AI, gắn kết thực tiễn.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Điều chỉnh:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Viết lại prompt bổ sung quiz tương tác, ví dụ thực tiễn,
+                    popup giải thích khái niệm, và mục AI Usage.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 3 */}
+            <div className="bg-white p-6 rounded-xl border border-green-200 shadow-sm">
+              <h4 className="font-bold text-green-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-green-700 font-bold">3</span>
+                </div>
+                Thiết kế trò chơi ô chữ
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Ý tưởng:</strong>
+                  </p>
+                  <p className="text-gray-600 italic">
+                    "Thêm trò chơi đố vui ô chữ các câu hỏi liên quan đến chủ đề
+                    hiện tại"
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Phát triển:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Thiết kế crossword với trang riêng /tro-choi, có 9 câu hỏi
+                    ngang ghép thành từ khóa dọc "BIENCHUNG".
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 4 */}
+            <div className="bg-white p-6 rounded-xl border border-yellow-200 shadow-sm">
+              <h4 className="font-bold text-yellow-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-yellow-700 font-bold">4</span>
+                </div>
+                Cải thiện và tùy chỉnh logic crossword
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Yêu cầu:</strong>
+                  </p>
+                  <p className="text-gray-600 italic">
+                    "Muốn chỉ có một hàng dọc cuối cùng ghép thành chữ 'Biện
+                    Chứng', với 9 câu hỏi tương ứng 9 chữ cái B-I-E-N-C-H-U-N-G"
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Giải pháp:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Thiết kế lưới ô chữ với 9 hàng ngang, mỗi câu trả lời chứa
+                    đúng một chữ cái tương ứng ở vị trí giao nhau với cột dọc.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 5 */}
+            <div className="bg-white p-6 rounded-xl border border-indigo-200 shadow-sm">
+              <h4 className="font-bold text-indigo-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-indigo-700 font-bold">5</span>
+                </div>
+                Tinh chỉnh nội dung và tính chính xác
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Vấn đề phát hiện:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    "Lão Tử làm gì có tác phẩm nào tên là kinh điển đâu" - câu
+                    trả lời KINHDIEN không phù hợp với lịch sử.
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Giải pháp:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Điều chỉnh thành MOILIENHE (mối liên hệ) để có chữ E, phù
+                    hợp với triết học biện chứng và chính xác về mặt nội dung.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 6 */}
+            <div className="bg-white p-6 rounded-xl border border-pink-200 shadow-sm">
+              <h4 className="font-bold text-pink-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-pink-700 font-bold">6</span>
+                </div>
+                Thiết kế giao diện riêng cho crossword
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Yêu cầu:</strong>
+                  </p>
+                  <p className="text-gray-600 italic">
+                    "Tôi muốn có 1 giao diện riêng. Khi bấm vào Trò chơi thì
+                    chuyển sang trang ô chữ"
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Giải pháp:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Tạo route `/tro-choi` riêng biệt với React Router, thiết kế
+                    trang CrosswordPage độc lập có navbar và layout riêng.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 7 */}
+            <div className="bg-white p-6 rounded-xl border border-orange-200 shadow-sm">
+              <h4 className="font-bold text-orange-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-orange-700 font-bold">7</span>
+                </div>
+                Cải thiện logic game và UX
+              </h4>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Phát hiện vấn đề:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    "Tại sao nó lại có 2 hàng dọc luôn? Trả lời đúng thì phải
+                    thông báo đúng, trả lời sai thì khóa cái hàng ngang đó lại."
+                  </p>
+                </div>
+                <div>
+                  <p className="text-gray-700 mb-2">
+                    <strong>Tối ưu hóa:</strong>
+                  </p>
+                  <p className="text-gray-600">
+                    Sửa logic chỉ có 1 cột dọc, thêm validation đúng/sai, khóa
+                    hàng sai, hiển thị thông báo rõ ràng và progress bar.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Bước 8 */}
+            <div className="bg-white p-6 rounded-xl border border-teal-200 shadow-sm">
+              <h4 className="font-bold text-teal-900 mb-3 flex items-center">
+                <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-teal-700 font-bold">8</span>
+                </div>
+                Hoàn thiện và tích hợp minh bạch AI
+              </h4>
+              <div className="text-sm">
+                <p className="text-gray-700 mb-2">
+                  <strong>Bước cuối cùng:</strong>
+                </p>
+                <div className="bg-teal-50 p-4 rounded-lg">
+                  <p className="text-gray-600 mb-3">
+                    Tạo section "Quá trình trao đổi với AI" để minh bạch hóa
+                    việc sử dụng AI trong nghiên cứu, đáp ứng yêu cầu học thuật
+                    của giảng viên.
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h5 className="font-semibold text-teal-800 mb-1">
+                        Thành tựu đạt được:
+                      </h5>
+                      <ul className="space-y-1 text-gray-600 text-xs">
+                        <li>✓ Website hoàn chỉnh 7 section nội dung</li>
+                        <li>✓ Trò chơi crossword tương tác</li>
+                        <li>✓ Quiz và popup giải thích khái niệm</li>
+                        <li>✓ Responsive design đẹp mắt</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold text-teal-800 mb-1">
+                        Minh bạch AI:
+                      </h5>
+                      <ul className="space-y-1 text-gray-600 text-xs">
+                        <li>✓ Ghi rõ vai trò AI hỗ trợ</li>
+                        <li>✓ Thể hiện quá trình phê phán, kiểm chứng</li>
+                        <li>✓ Cam kết chất lượng học thuật</li>
+                        <li>✓ Tạo precedent cho dự án tương lai</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 p-6 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl">
+            <h4 className="font-bold text-gray-900 mb-4">
+              Bài học từ quá trình làm việc với AI
+            </h4>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h5 className="font-semibold text-purple-800 mb-2">
+                  ✅ Điểm mạnh của AI:
+                </h5>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• Hỗ trợ cấu trúc và tổ chức nội dung logic</li>
+                  <li>• Đề xuất ý tưởng sáng tạo từ yêu cầu mơ hồ</li>
+                  <li>• Tối ưu hóa code và giao diện người dùng</li>
+                  <li>• Phản hồi nhanh, sẵn sàng điều chỉnh</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold text-indigo-800 mb-2">
+                  🎯 Vai trò con người:
+                </h5>
+                <ul className="space-y-1 text-sm text-gray-700">
+                  <li>• Kiểm chứng tính chính xác của nội dung</li>
+                  <li>• Đưa ra yêu cầu cụ thể và phản biện</li>
+                  <li>• Quyết định hướng phát triển cuối cùng</li>
+                  <li>• Đảm bảo tính học thuật và đạo đức</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </Section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
